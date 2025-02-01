@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-02-01T15:45:24.738915" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\TesteAdSet Integrador\test">
+<suite id="s1-s1" name="Tests" source="C:\TesteAdSet Integrador\test\tests.robot">
+<test id="s1-s1-t1" name="TC07: Inclusão de um novo veículo com dados inválidos." line="8">
+<kw name="Fazer login" owner="Login_Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:25.176171" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-01T15:45:25.176171" elapsed="2.842079"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-01T15:45:28.018250" elapsed="0.088070"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:28.106320" level="INFO">Opening url 'https://www.adset.com.br/Integrador/Home/Index'</msg>
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-01T15:45:28.106320" elapsed="4.253712"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:32.360032" level="INFO">${handles} = ['E75A3D5B3A98FF973F35570678304610']</msg>
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-01T15:45:32.360032" elapsed="0.000000"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${handles}[-1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:32.360032" elapsed="0.015206"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@name='Email']</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-01T15:45:32.375238" elapsed="0.027485"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:32.402723" level="INFO">Typing text 'qa@adset.com.br' into text field 'xpath=//input[@name='Email']'.</msg>
+<arg>xpath=//input[@name='Email']</arg>
+<arg>qa@adset.com.br</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:32.402723" elapsed="0.334694"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:32.740804" level="INFO">Typing password into text field 'xpath=//input[@name='Senha']'.</msg>
+<msg time="2025-02-01T15:45:32.818636" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//input[@name='Senha']</arg>
+<arg>9PK6#E8m</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:32.738393" elapsed="0.266746"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:33.007705" level="INFO">Clicking element 'xpath=//button[@type='submit'][contains(.,'Entrar')]'.</msg>
+<arg>xpath=//button[@type='submit'][contains(.,'Entrar')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:33.007705" elapsed="2.333889"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:35.347873" level="INFO">Executing JavaScript:
+window.scrollBy(0, 1000)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 1000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.341594" elapsed="0.022463"/>
+</kw>
+<status status="PASS" start="2025-02-01T15:45:25.175164" elapsed="10.188893"/>
+</kw>
+<kw name="Dado que estou na pagina de inclusao de veiculos" owner="Inclusao_Veiculo_Page">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:35.372405" level="INFO">${handles} = ['E75A3D5B3A98FF973F35570678304610']</msg>
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.364057" elapsed="0.008348"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${handles}[-1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.372405" elapsed="0.011426"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//i[contains(@class,'s16 icomoon-icon-car')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.383831" elapsed="0.072761"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:35.456592" level="INFO">Clicking element 'xpath=//i[contains(@class,'s16 icomoon-icon-car')]'.</msg>
+<arg>xpath=//i[contains(@class,'s16 icomoon-icon-car')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.456592" elapsed="0.192855"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:35.651510" level="INFO">Clicking element 'xpath=//span[@class='txt'][contains(.,'Incluir')]'.</msg>
+<arg>xpath=//span[@class='txt'][contains(.,'Incluir')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.650429" elapsed="0.195887"/>
+</kw>
+<status status="PASS" start="2025-02-01T15:45:35.364057" elapsed="0.482259"/>
+</kw>
+<kw name="Quando preencho os campos obrigatórios com dados inválidos" owner="Inclusao_Veiculo_Page">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:35.861168" level="INFO">${handles} = ['E75A3D5B3A98FF973F35570678304610']</msg>
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.848713" elapsed="0.012796"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${handles}[-1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.862685" elapsed="0.013226"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Menu_Incluir}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-01T15:45:35.875911" elapsed="1.035175"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:36.912124" level="INFO">Typing text 'VVV-4R00' into text field '//input[@name='Placa']'.</msg>
+<arg>${Placa_Veiculo}</arg>
+<arg>VVV-4R00</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:36.912124" elapsed="0.308065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:37.222180" level="INFO">Typing text '1000' into text field 'xpath=//input[@data-val-number='O campo Quilometragem deve ser um número.']'.</msg>
+<arg>${Campo_Quilometragem}</arg>
+<arg>1000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:37.221171" elapsed="0.432639"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:37.659481" level="INFO">Typing text '5000000' into text field 'xpath=//input[contains(@data-val-number,'O campo Valor do Veículo deve ser um número.')]'.</msg>
+<arg>${Campo_Valor}</arg>
+<arg>5000000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:37.656616" elapsed="0.310511"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:37.967127" level="INFO">Executing JavaScript:
+window.scrollBy(0, 4000)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 4000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-01T15:45:37.967127" elapsed="0.018719"/>
+</kw>
+<status status="PASS" start="2025-02-01T15:45:35.846316" elapsed="2.139530"/>
+</kw>
+<kw name="Então o sistema não deve permitir a inclusão do veículo" owner="Inclusao_Veiculo_Page">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:37.985846" level="INFO">Executing JavaScript:
+window.scrollBy(0, 4000)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 4000)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-01T15:45:37.985846" elapsed="0.038965"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Botao_confirmar}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-01T15:45:38.026822" elapsed="0.062107"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:38.088929" level="INFO">Clicking button 'xpath=//button[contains(@type,'submit')]'.</msg>
+<arg>${Botao_confirmar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-01T15:45:38.088929" elapsed="0.302633"/>
+</kw>
+<status status="PASS" start="2025-02-01T15:45:37.985846" elapsed="0.406714"/>
+</kw>
+<kw name=" E deve exibir a mensagem de erro" owner="Inclusao_Veiculo_Page">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:38.400669" level="INFO">Executing JavaScript:
+window.scrollBy(4000, 0)
+Without any arguments.</msg>
+<arg>window.scrollBy(4000, 0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-01T15:45:38.398152" elapsed="0.027360"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Menu_Incluir}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-01T15:45:38.426614" elapsed="0.095665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Mensagem_Erro}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-01T15:45:38.523277" elapsed="0.947203"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-01T15:45:39.908160" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="timeout%3D33"&gt;&lt;img src="timeout%3D33" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-01T15:45:39.908160" level="INFO">C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\remote\webdriver.py:822: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  return self.get_screenshot_as_file(filename)</msg>
+<arg>timeout=33</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-01T15:45:39.470480" elapsed="0.437680"/>
+</kw>
+<status status="PASS" start="2025-02-01T15:45:38.396117" elapsed="1.512043"/>
+</kw>
+<doc>Teste que valida o comportamento do sistema ao tentar incluir um novo veículo com dados inválidos.</doc>
+<tag>TC07</tag>
+<status status="PASS" start="2025-02-01T15:45:25.174245" elapsed="14.734917"/>
+</test>
+<doc>Este arquivo contém os casos de teste de inclusão de veículos na plataforma AdSet Integrador.</doc>
+<status status="PASS" start="2025-02-01T15:45:24.800936" elapsed="15.109227"/>
+</suite>
+<status status="PASS" start="2025-02-01T15:45:24.738915" elapsed="15.174831"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC07</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Test.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
